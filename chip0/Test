@@ -1,0 +1,22 @@
+Assignment 1
+Question 3: Circuits in PennyLane
+The goal of this activity is to practice some simple quantum circuitry. Many languages and frameworks are available in the market today, that act as transpilers (translators of codes between your classical computer and the operations that make a quantum computer operate). For sake of awareness, some of the widely used options are:
+
+Q# - by Microsoft
+Qiskit - by IBM
+PennyLane - by Xanadu
+cirq - by Google
+pyQuil - by Rigetti
+Q# is a full programming language, while the other four are Python libraries. Of these, Qiskit and Rigetti offer free access to real quantum computers so that one can test the differences between running codes in a quantum simulator and the reality of today's processors. PennyLane, as pointed out in Assignment 0, is our official choice for this course; it was created by Toronto-based Xanadu, so it is a Canadian staple, it can be easily integrated with Qiskit and run on real quantum machines too, and it contains very clear and accessible documentation. As a bonus, PennyLane was created with the goal of Quantum Machine Learning applications, a timely topic these days.
+
+So let's get to business and practice some circuits with PennyLane.
+
+Example
+Let's get started by breaking down the example we used to test our installation in Assignment 0. The same example code can befound in PennyLane's introductory documentation here.
+
+First, we have to define a quantum device on which we will run a quantum circuit. As an example, let's design a device with 2 qubits, on which we will perform analytic calculations. We import the PennyLane package and start 2-qubit device as follows
+
+In [6]:
+import pennylane as pl
+dev = pl.device('default.qubit', wires=2, analytic=True)
+Next,
